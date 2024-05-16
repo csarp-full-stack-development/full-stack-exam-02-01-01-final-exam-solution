@@ -8,13 +8,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.DataContext>
-        <viewModel:HeadTeacherViewModel/>
+        <viewModel:AwardedStudentViewModel/>
     </Window.DataContext>
     <StackPanel>
-        <TextBlock Margin="2 2 2 2" Text="{Binding }"></TextBlock>
-        <TextBlock Margin="2 2 2 2" Text="{Binding }"></TextBlock>
-        <TextBlock Margin="2 2 2 2" Text="{Binding }"></TextBlock>
-        <TextBlock Margin="2 2 2 2" Text="{Binding }"></TextBlock>
+        <TextBlock Margin="2 2 2 2" Text="{Binding Older}"></TextBlock>
+        <TextBlock Margin="2 2 2 2" Text="{Binding AwardAvarage}"></TextBlock>
+        <TextBlock Margin="2 2 2 2" Text="{Binding NumberOfGender}"></TextBlock>
+        <TextBlock Margin="2 2 2 2" Text="{Binding OneTimePaymentInYear}"></TextBlock>
+        <TextBlock Margin="2 2 2 2" Text="{Binding AnnualScholarshipAmount}"></TextBlock>
+        <TextBlock Margin="2 2 2 2" Text="{Binding ScholarshipPaidPerScoolClass}"></TextBlock>
+        <TextBlock Margin="2 2 2 2" Text="{Binding AdultStudentScholarship}"></TextBlock>
         
     </StackPanel>
 </Window>
