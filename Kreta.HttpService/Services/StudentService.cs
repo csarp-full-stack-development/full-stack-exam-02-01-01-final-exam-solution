@@ -77,5 +77,23 @@ namespace Kreta.HttpService.Services
             }
             return new List<Student>();
         }
+
+        public async Task<int> GetNumberOfGender(bool isWoman)
+        {
+            if (_httpClient is not null)
+            {
+                try
+                {
+
+                    int resultNumber = await _httpClient.GetFromJsonAsync<int>($"api/Student/NumberOfGender/{isWoman}");
+                    return resultNumber;
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex.Message);
+                }
+            }
+            return 0;
+        }
     }
 }

@@ -74,5 +74,14 @@ namespace Kreta.Backend.Controllers
             }
             return BadRequest("Az adatok elérhetetlenek!");
         }
+
+        [HttpGet("NumberOfGender/{isWoman}")]
+        public IActionResult GetNumberOfHeadTeacher(bool isWoman)
+        {
+            if (_studentRepo is not null)
+                return Ok(_studentRepo.GetNumberOfGener(isWoman));
+            else
+                return BadRequest();
+        }
     }
 }

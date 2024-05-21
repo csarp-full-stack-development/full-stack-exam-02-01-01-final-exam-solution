@@ -26,5 +26,10 @@ namespace Kreta.Backend.Repos
                 student.EducationLevelId == null ||
                 student.EducationLevelId == Guid.Empty);
         }
+
+        public int GetNumberOfGener(bool isWoman)
+        {
+            return FindByCondition(teacher => teacher.IsWoman == isWoman).Count();
+        }
     }
 }

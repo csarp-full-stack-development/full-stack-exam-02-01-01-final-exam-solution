@@ -9,5 +9,6 @@ namespace Kreta.Backend.Repos
         public IQueryable<Student> SelectStudentsByEducationId(Guid educationID);
 
         public IQueryable<Student> SelectStudentsWithoutEducationLevel();
+        public int GetNumberOfGener(bool isWoman);
     }
 }
